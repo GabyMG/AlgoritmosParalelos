@@ -1,0 +1,938 @@
+/* 
+    Document   : generico
+    Created on : 21-mar-2010, 11:26:34
+    Author     : Daniel Guerrero Martínez, Sergio Rodríguez Lumley
+    Description:
+        Se desea dar un diseño simple y sofisticado, siguiendo las reglas del
+    estándar CSS3
+*/
+
+@font-face {
+    font-family: "Segoe Print";
+    src: local("Segoe Print"), url("SegoePrint.ttf");
+}
+
+root {
+    display: block;
+}
+
+body {
+    background: white url("fondoPagina.jpg") center repeat;
+    min-width: 800px;
+}
+
+div {
+    background-color: rgb(245, 245, 245);
+}
+
+.vista {
+    width: 800px;
+    margin: auto;
+    margin-top: 10px;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(100,100,100);
+    /*Bordes redondos*/
+    border-radius: 15px; /* CSS3 */
+    -moz-border-radius:15px; /* Firefox*/
+    -webkit-border-radius: 15px; /* WebKit y Safari*/
+    /*Sombreados*/
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+}
+
+/******* CABECERA *******/
+#cabecera {
+    height: 100px;
+    background: url("cabecera.png");
+}
+
+#cabecera .selec{
+    opacity:1;
+    border: rgb(100, 150, 100) 1px;
+}
+
+/******* idiomas (dentro de CABECERA)*****/
+
+#cabecera input{
+    border: 0px;
+    opacity:0.50;
+}
+
+#cabecera #idiomas input{
+    margin-top:40px;
+    margin-right:10px;
+    height:22px;
+    width:40px;
+    float:right;
+}
+
+#cabecera  #idiomas{
+	clear: right;
+}
+
+#cabecera #temas input{
+	margin-top:10px;
+    margin-right:10px;
+    height:15px;
+    width:15px;
+    float:right;
+}
+
+#es{
+    background-image: url("es.jpg");
+    background-position: center;
+    text-indent: -9999px;
+}
+
+#en{
+    background-image: url("en.jpg");
+    background-position: center;
+    text-indent: -9999px;
+}
+
+#cabecera input:hover{
+    box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+    -moz-box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+    -webkit-box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+}
+
+#dark{
+	background-image: url("estilo02.png");
+	background-position: center;
+    text-indent: -9999px;
+}
+
+#light{
+	background-image: url("estilo01.png");
+	background-position: center;
+    text-indent: -9999px;
+}
+
+/****** ERRORES *********/
+
+#errores{
+    background-color: orange;
+    font-size: 12px;
+    line-height:2px;
+}
+
+#errores p{
+    margin-left: 20px;
+}
+
+/******* NAVEGADOR *******/
+.navegador {
+    height: 26px;
+    float: left;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(100,100,100);
+    background: transparent;
+}
+
+#navegador {
+    width: 800px;
+    height: 30px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: transparent;
+}
+
+#anterior {
+    width: 66px;
+    float:left;
+
+    background-image: url("lAnterior.png");
+    -webkit-border-radius: 15px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius: 15px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-radius: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /*Sombreados*/
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+}
+
+#anterior a{
+    display: block;
+    text-indent: -9999em;
+}
+
+#anterior:hover {
+    box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+    -moz-box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+    -webkit-box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+}
+
+#enlaceIndice{
+    margin-left:5em;
+    position:absolute;
+    width:636px;
+
+    overflow: hidden;
+
+    background-color: rgb(245,245,245);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    /*Sombreados*/
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+}
+
+#indiceDesplegable{
+    margin: 0em;
+    border: none;
+}
+
+#enlaceIndice:hover {
+    box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+    -moz-box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+    -webkit-box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+
+    cursor:pointer;
+}
+
+#cerrarIndice{
+    text-align: center;
+}
+
+#siguiente {
+    width: 66px;
+    float:right;
+
+    background-image: url("lSiguiente.png");
+    -webkit-border-radius: 5px;
+    -webkit-border-top-right-radius: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    -moz-border-radius: 5px;
+    -moz-border-radius-topright: 15px;
+    -moz-border-radius-bottomright: 15px;
+    border-radius: 5px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    /*Sombreados*/
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+}
+
+#siguiente a{
+    display: block;
+    text-indent: -9999em;
+}
+
+#siguiente:hover {
+    box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+    -moz-box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+    -webkit-box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+
+    cursor:pointer;
+}
+
+/******* MENU *******/
+#menu {
+    position: absolute;
+    top: 160px;
+    margin-left: 0;
+    width: 70px;
+    padding-left: 0px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    list-style-type: none;
+    background-color: transparent;
+}
+
+.menu{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-left: 5px;
+    margin-top: 5px;
+    text-indent: -9999em;
+}
+
+.menu:hover{
+    box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+    -moz-box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+    -webkit-box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+    cursor: pointer;
+}
+
+a.enlaceInvisible {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#lHome{
+    background-image: url("lHome.png");
+}
+#lTeoria{
+    background-image: url("lTeoria.png");
+}
+#lTutorial{
+    background-image: url("lTutorial.png");
+}
+#lPractica{
+    background-image: url("lPractica.png");
+}
+#lAyuda{
+    background-image: url("lAyuda.png");
+}
+#lProfesorado{
+    background-image: url("lProfesorado.png");
+}
+#lSalir{
+    background-image: url("lSalir.png");
+}
+
+#lHome:hover{
+    background-image: url("lHomeHover.png");
+}
+#lTeoria:hover{
+    background-image: url("lTeoriaHover.png");
+}
+#lTutorial:hover{
+    background-image: url("lTutorialHover.png");
+}
+#lPractica:hover{
+    background-image: url("lPracticaHover.png");
+}
+#lAyuda:hover{
+    background-image: url("lAyudaHover.png");
+}
+#lProfesorado:hover{
+    background-image: url("lProfesoradoHover.png");
+}
+#lSalir:hover{
+    background-image: url("lSalirHover.png");
+}
+
+#ocultar{
+    float:right;
+    position:relative;
+    width: 20px;
+    height: 20px;
+
+    right: -20px;
+    top: -25px;
+    /*margin-left: 0px;
+    margin-top: 0px;*/
+    background: transparent url("tabOcultar.png");
+    z-index: 100;
+}
+
+#ocultar:hover{
+    cursor:pointer;
+    background: transparent url("tabOcultarHover.png");
+}
+
+#ocultarIn{
+    float:right;
+    position:relative;
+    width: 20px;
+    height: 20px;
+
+    right: -20px;
+    top: -25px;
+    /*margin-left: 0px;
+    margin-top: 0px;*/
+    background: transparent url("tabOcultarIn.png");
+}
+
+#ocultarIn:hover{
+    cursor:pointer;
+    background: transparent url("tabOcultarInHover.png");
+}
+/******** FLECHA DE DESPLAZAMIENTO ********/
+
+#subir{
+    position: fixed;
+    left: 50%;
+    margin-left: 385px;
+    top:80px;
+    width:20px;
+    height:30px;
+    background: url("subir.png") rgb(245, 245, 245) no-repeat;
+    border: 2px solid #646464;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    /*Sombreados*/
+    box-shadow: 4px 0px 10px rgba(0,0,0,0.7);
+    -moz-box-shadow: 4px 0px 10px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 4px 0px 10px rgba(0,0,0,0.7);
+}
+
+#subir:hover{
+    box-shadow: 4px 0px 10px rgba(0,150,0,0.9);
+    -moz-box-shadow: 4px 0px 10px rgba(0,150,0,0.9);
+    -webkit-box-shadow: 4px 0px 10px rgba(0,150,0,0.9);
+    cursor: pointer;
+}
+
+/********NOTICIAS*********/
+#noticias {
+	background: rgb(250, 250, 250);
+	border: 2px solid #333333;
+	border-bottom-left-radius: 15px 15px;
+	border-bottom-right-radius: 15px 15px;
+	border-top-left-radius: 15px 15px;
+	border-top-right-radius: 15px 15px;
+	padding: 0px 5px 5px;
+	padding-top: 0px;
+	padding-bottom: 10px;
+	position: absolute;
+	right: 10px;
+	top: 125px;
+	width: 150px;
+}
+#noticias h1{
+    margin: 0px;
+    font-size: 1.5em;
+    margin-bottom: -0.7em;
+    text-align: center;
+}
+
+
+
+#noticias h2{
+    font-size: 1.2em;
+    margin-top: 1em;
+    margin-bottom: -0.7em;
+}
+
+#noticias h3{
+    font-size: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#noticias p{
+    font-size: 1em;
+    margin: 0px;
+}
+
+
+
+/******* CONTENIDO *******/
+#cuerpo {
+    height: 100%;
+    width: 770px;
+    padding: 15px;
+    padding-bottom: 25px;
+}
+
+a {
+    color: rgb(50, 100, 70);
+    text-decoration: underline;
+    outline:medium none;
+}
+
+a.nounderline {
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(10, 50, 30);
+    text-decoration: underline;
+}
+
+a img{
+    text-decoration: none;
+    border: none 0px;
+}
+
+/* BOTONES */
+.bDescarga {
+    display: inline-table;
+    float: right;
+    width: 26px;
+    height: 26px;
+    text-indent: -9999em;
+    font-size: 0px;
+    background: no-repeat center transparent url("bDescarga.png");
+}
+
+.bImagen {
+    display: block;
+    width: 250px;
+    height: 150px;
+    margin: auto;
+    text-align: center;
+
+    /*-webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;*/
+
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+}
+
+.bImagen:hover {
+    box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+    -moz-box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+    -webkit-box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+}
+
+.bAnimacion{
+    display: block;
+    margin: auto;
+    text-align: center;
+
+    /*-webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;*/
+
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+}
+
+.bAnimacion:hover {
+    box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+    -moz-box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+    -webkit-box-shadow: 0px 0px 25px rgba(0,150,0,0.9);
+
+    cursor: pointer;
+}
+
+div.contenido {
+    display: block;
+    border-width: 1px;
+    border-color: rgb(30, 60, 30);
+    border-style: solid;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+
+    background-color: rgb(240, 245, 240);
+
+    border-radius: 15px; /* CSS3 */
+    -moz-border-radius:15px; /* Firefox*/
+    -webkit-border-radius: 15px; /* WebKit y Safari*/
+}
+
+.contenido p {
+    text-align: justify;
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.centro {
+    display: block;
+    text-align: center;
+}
+
+.anotacion {
+    font-style: italic;
+}
+
+/******** Elementos de codigo ******/
+.codigo {
+    font-family: monospace;
+}
+
+.comment {
+    font-family: monospace;
+    color: rgb(120, 120, 120);
+    font-style: italic;
+}
+
+.pre {
+    font-family: monospace;
+    color: rgb(150, 150, 50);
+    font-style: normal;
+    font-weight: bold;
+}
+
+.string {
+    font-family: monospace;
+    color: rgb(0, 100, 0);
+    font-style: normal;
+}
+
+.char {
+    font-family: monospace;
+    color: rgb(100, 140, 20);
+    font-style: normal;
+}
+
+.float {
+    font-family: monospace;
+    color: rgb(80, 130, 110);
+    font-style: normal;
+}
+
+.int {
+    font-family: monospace;
+    color: rgb(80, 130, 110);
+    font-style: normal;
+}
+
+.bool {
+    font-family: monospace;
+    color: rgb(120, 50, 0);
+    font-style: normal;
+    font-weight: bold;
+}
+
+.type {
+    font-family: monospace;
+    color: rgb(200, 100, 0);
+    font-style: normal;
+}
+
+.flow {
+    font-family: monospace;
+    color: rgb(190, 60, 60);
+    font-style: normal;
+}
+
+.keyword {
+    font-family: monospace;
+    color: rgb(250, 100, 50);
+    font-style: normal;
+    font-weight: bold;
+}
+
+.operator {
+    font-family: monospace;
+    color: rgb(160, 110, 80);
+    font-style: normal;
+}
+
+.funcion {
+    font-family: monospace;
+    color: #4f7a88;
+    font-weight: bold;
+}
+
+.funcion a{
+    font-family: monospace;
+    color: #4f7a88;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.const {
+    font-family: monospace;
+    color: rgb(30, 140, 80);
+    font-weight: bold;
+}
+
+.const a{
+    font-family: monospace;
+    color: rgb(30, 140, 80);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/** spanSTART **/
+span.negrita {
+    font-weight: bold;
+    color: rgb(30, 60, 30);
+}
+
+span.anotacion{
+    margin-left: 2em;
+}
+
+/** divSTART **/
+div.codigo{
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(235, 240, 235);
+
+    border-width: 2px;
+    border-color: rgb(130, 160, 130);
+    border-style: solid;
+    border-radius: 5px; /* CSS3 */
+    -moz-border-radius:5px; /* Firefox*/
+    -webkit-border-radius: 5px; /* WebKit y Safari*/
+
+    /* Cualquier texto interno */
+    font-family: monospace;
+    color: rgb(0, 0, 0);
+}
+
+code {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(235, 240, 235);
+
+    border-width: 2px;
+    border-color: rgb(130, 160, 130);
+    border-style: solid;
+    border-radius: 5px; /* CSS3 */
+    -moz-border-radius:5px; /* Firefox*/
+    -webkit-border-radius: 5px; /* WebKit y Safari*/
+
+    /* Cualquier texto interno */
+    font-family: monospace;
+    color: rgb(0, 0, 0);
+}
+
+div.consola {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(30, 35, 30);
+
+    border-width: 2px;
+    border-color: rgb(130, 160, 130);
+    border-style: solid;
+    border-radius: 5px; /* CSS3 */
+    -moz-border-radius:5px; /* Firefox*/
+    -webkit-border-radius: 5px; /* WebKit y Safari*/
+
+    /* Cualquier texto interno */
+    font-family: monospace;
+    color: rgb(240, 255, 240);
+}
+
+div.contenido div.contenido{
+    display: block;
+    border-width: 2px;
+    border-color: rgb(30, 60, 30);
+    border-style: dashed;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+
+    background-color: rgb(230, 235, 230);
+
+    border-radius: 15px; /* CSS3 */
+    -moz-border-radius:15px; /* Firefox*/
+    -webkit-border-radius: 15px; /* WebKit y Safari*/
+}
+
+div #versolucion{
+    width: 40px;
+    height: 25px;
+    background: url("ojo.png");
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.indiceInterno {
+    list-style: none;
+    padding-left: 0px;
+    padding-bottom: 8px;
+    padding-top: 2px;
+
+    border: 2px dotted rgb(150, 150, 150);
+    background: transparent url("fondoIndicePagina.jpg") repeat;
+
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.indiceInterno li {
+    font-family: "Segoe Print", sans;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.indiceInterno a{
+    display: block;
+    text-decoration: none;
+    color: rgb(10, 50, 10);
+}
+
+.indiceInterno a:hover{
+    background-color: rgb(180, 255, 180);
+    cursor: pointer;
+}
+
+.indiceInterno a:visited{
+    color: rgb(10, 50, 10);
+}
+
+.indiceInterno .h1 {
+    font-size: 14px;
+    padding-left: 10px;
+    text-transform: uppercase;
+    color: rgb(0, 30, 0);
+}
+
+.indiceInterno .h2 a{
+    font-size: 12px;
+    padding-left: 50px;
+}
+
+.indiceInterno .h3 a{
+    font-weight: normal;
+    font-size: 12px;
+    padding-left: 80px;
+}
+
+.indiceInterno .h4 a{
+    font-weight: normal;
+    font-size: 12px;
+    padding-left: 100px;
+}
+
+.indiceInterno .h5 a{
+    font-weight: normal;
+    font-size: 10px;
+    padding-left: 120px;
+}
+
+/*DIV transparente que ocupe toda la pantalla*/
+.medio{
+    position: fixed;
+    height:100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 200;
+    background-color: white;
+    opacity: 0.8;
+}
+
+#flash{
+    position: fixed;
+    width: 800px;
+    height: 600px;
+    top:50%;
+    left:50%;
+    background: #EEEEEE no-repeat;
+    margin-top: -300px;
+    margin-left: -400px;
+    opacity: 1;
+    z-index: 1000;
+
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+}
+
+/*AÑADIDO PARA TITULO DE ANIMACION Y BOTON DE CERRADO*/
+#flash h3{
+	margin-left: 50px;
+	margin-top: 10px;
+	top: 0px;
+	position: absolute;
+}
+
+#cerrarflash {
+	left: 700px;
+	margin-top: 10px;
+	margin-right: 0px;
+	text-indent: -9999px;
+	height: 30px;
+	width: 30px;
+	background: transparent url("bCerrarFlash.png");
+}
+
+#cerrarflash:hover {
+	cursor: pointer;
+}
+
+/******** ENCABEZADOS *******/
+.titulo {
+    color: #323C32;
+    font-family: serif;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+
+    border-bottom: solid rgb(150, 160, 150);
+    padding-bottom: 1px;
+}
+
+h1.titulo p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #323C32;
+    font-family: serif;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+h1 {
+    font-family: "Segoe Print", serif;
+    color: rgb(50, 60, 50);
+    font-weight: normal;
+}
+
+h2 {
+    font-family: "Segoe Print", serif;
+    color: rgb(60, 70, 60);
+    font-weight: normal;
+}
+
+h3 {
+    font-family: "Segoe Print", serif;
+    color: rgb(70, 80, 70);
+    font-weight: normal;
+}
+
+h4 {
+    font-family: "Segoe Print", serif;
+    color: rgb(80, 90, 80);
+    font-weight: normal;
+}
+
+/******* FINAL DE PAGINA *******/
+#creadoresWeb {
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
+    color: rgb(10, 50, 10);
+    font-family: "Segoe Print", serif;
+    font-size: 14px;
+    background: transparent;
+
+}
+
+/******** FLASH ********/
+object {
+    display: block;
+    margin: auto;
+    position: relative;
+    opacity: 1;
+    z-index: 1000;
+    width: 700px;
+    height: 500px;
+    top:50%;
+    left:50%;
+    margin-top: -250px;
+    margin-left: -350px;
+}
+
+embed {
+    display: block;
+    margin: auto;
+    opacity: 1;
+    z-index: 1000;
+}
+
+

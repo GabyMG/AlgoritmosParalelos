@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<!-- 
+    Document   : Funciones de MPI
+    Created on : 04-abr-2010, 10:02:39
+    Author     : Daniel Guerrero Mart�nez, Sergio Rodr�guez Lumley
+-->
+
+
+
+<html lang="es">
+                <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		    <meta name="google-site-verification" content="0DvGanY5lIegMDLM6tZWwbac1BFBH0TaSNDRU_nsfXw" />
+                    <!--<base href="http://lsi.ugr.es/jmantas/pdp/" >-->
+                    <link rel="shortcut icon" href="../imagenes/iconoweb.ico" type="imagen/x-icon" ><link href="../estilos/estilo_generico/generico.css" type="text/css" rel="stylesheet" title="Light"><title>Web de Programaci&oacute;n Distribuida y Paralela</title>
+                    <script src="../scripts/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+                    <script src="../scripts/jquery/jquery.scrollTo-min.js" type="text/javascript"></script>
+                    <script src="../scripts/animacionIndice.js" type="text/javascript"></script><link href="../estilos/estilo_ayuda/ayuda.css" type="text/css" rel="stylesheet">
+</head><body><div class="vista" id="cabecera"><div id="temas"><form method="get" action =""><input name="ins" value="eclipse03" type="hidden" ><input name="stylo" value="generico" type="hidden" ><input title="Light theme" id="light" value="generico" type="submit" class=selec> </form><form method="get" action =""><input name="ins" value="eclipse03" type="hidden" ><input name="stylo" value="dark" type="hidden" ><input title="Dark theme" id="dark" value="dark" type="submit" > </form></div><div id="idiomas"><form method="get" action =""><input name="ins" value="eclipse03" type="hidden" ><input name="idioma" value="es" type="hidden" ><input title="Español" id="es" value="es" type="submit" class=selec> </form><form method="get" action =""><input name="ins" value="eclipse03" type="hidden" ><input name="idioma" value="en" type="hidden" ><input title="English" id="en" value="en" type="submit" > </form></div></div><ol id="menu">
+	    <li class="menu vista" id="lHome"><a class="enlaceInvisible" title="Volver al inicio" href="../index.php.html">Home</a></li>
+            <li class="menu vista" id="lTeoria"><a class="enlaceInvisible" title="Ir al programa de teoria" href="../teoria/teoria.php.html">Ir al programa de teoria</a></li>
+            <li class="menu vista" id="lTutorial"><a class="enlaceInvisible" title="Ir a la sección de tutoriales" href="http://lsi.ugr.es/jmantas/pdp/tutoriales/tutoriales.php">Ir a la sección de tutoriales</a></li>
+            <li class="menu vista" id="lPractica"><a class="enlaceInvisible" title="Ir al programa de prácticas" href="http://lsi.ugr.es/jmantas/pdp/practicas/practicas.php">Ir al programa de prácticas</a></li>
+            <li class="menu vista" id="lAyuda"><a class="enlaceInvisible" title="Consultar ayuda de MPI y OpenMP" href="ayuda.php.html">Consultar ayuda de MPI y OpenMP</a></li>
+            <li class="menu vista" id="lProfesorado"><a class="enlaceInvisible" title="Ir a la sección de profesorado" href="http://lsi.ugr.es/jmantas/pdp/profesorado/profesorado.php">Ir a la sección de profesorado</a></li>
+        </ol><div class="vista" id="cuerpo"><ol class="indiceInterno" id="indiceInterno" start="0"><li class="h1">Indice de pagina</li><li class="h2"><a href="../index.html#nodiveclipseinstall">1. Instalaci&oacute;n de Eclipse 3/3 </a></li><li class="h2"><a href="../index.html#descarga">2. Configuraci&oacute;n del Entorno</a></li></ol><h1 id="nodiveclipseinstall" >Instalaci&oacute;n de Eclipse 3/3 <a class="bDescarga" title="Descarga el fichero" href="datos/instalaciones/Instalacion_Depurador_Eclipse.pdf">Descarga</a></h1><h1 id="descarga" >Configuraci&oacute;n del Entorno</h1><div class="contenido"><p>La forma m&aacute;s sencilla de configurar el entorno y probar dicha configuraci&oacute;n es crear y ejecutar una aplicaci&oacute;n de <span class="funcion"><a href="mpi_ayuda.php.html">MPI</a></span>.<br />
+<br />
+    </p> <ul><li>Abrimos el IDE Eclipse (Tal vez necesitemos utilizar el par&aacute;metro -clean para forzarlo a reconocer las nuevas funcionalidades y plug-ins).</li><li>Pasamos a la perspectiva C/C++ (Ventana (Window) → Abrir Perspectiva (Open Perspective) → Otro.. (Other...))</li></ul>  <img alt="Muestra de la vista en perspectiva C/C++" src="datos/imagenes_eclipse/07.jpg" />  <ul><li>Creamos un peque&ntilde;o proyecto de <span class="funcion"><a href="mpi_ayuda.php.html">MPI</a></span> C (Archivo (File) → Nuevo (new) → Proyecto C++ (C++ Project))</li></ul>  <img alt="Seleccionado un proyecto C/C++" src="datos/imagenes_eclipse/08.jpg" />  <ul><li>Seleccionamos "<span class="funcion"><a href="mpi_ayuda.php.html">MPI</a></span> pi C++ Project", nos saldr&aacute; un cuadro pidi&eacute;ndonos que configuremos las preferencias de <span class="funcion"><a href="mpi_ayuda.php.html">MPI</a></span>. Aceptamos y las configuramos. Dejaremos todo por defecto e incluiremos la ruta de inclusi&oacute;n de cabeceras de OpenMPI, que ser&aacute; la implementaci&oacute;n que utilizaremos. Por defecto ser&aacute; “/usr/include/openmpi”.</li></ul>  <img alt="Muestra del resultado de las preferencias de MPI" src="datos/imagenes_eclipse/09.jpg" />  <ul><li>Una vez configurado, pasamos a crear el proyecto.</li></ul>  <img alt="Crear proyecto MPI en C++" src="datos/imagenes_eclipse/10.jpg" />  <ul><li>Abrimos la perspectiva de ejecuci&oacute;n de PTP (PTP Runtime Perspective) (Ventana (Window) → Abrir perspectiva (Open Perspective) → Otros (Other) → “Parallel Runtime”)</li><li>Cree un gestor de recursos (Resource Manager), con OpenMPI (Dejaremos todos los par&aacute;metros por defecto) y lo comenzamos. Deber&iacute;a ver una m&aacute;quina y uno o m&aacute;s nodos en el cuadro de "Vista de m&aacute;quinas" (Machine View).</li></ul>  <img alt=" Añadir Gestor de Recursos" src="datos/imagenes_eclipse/11.jpg" />  <ul><li>Creamos una configuraci&oacute;n de ejecuci&oacute;n (Launch Configuration) en Ejecutar (Run)-&gt; Configuraciones de Ejecuci&oacute;n (Run Configurations...). Seleccionamos la configuraci&oacute;n de Aplicaci&oacute;n Paralela (Parallel Application) y pulsamos sobre el bot&oacute;n de "Nuevo" (Arriba a la izquierda).</li></ul>  <img alt="Crear una configuración de ejecución paralela" src="datos/imagenes_eclipse/12.jpg" /> <p>Rellenamos la informaci&oacute;n para cada caso particular, en nuestro caso, dejamos todo por defecto, excepto:<br />
+    </p> <ul><li>En la pesta&ntilde;a de Recursos (Resources) seleccionamos el n&uacute;mero de procesos.</li><li>En la pesta&ntilde;a de aplicaci&oacute;n (Application) seleccionamos nuestro proyecto para "Proyecto Paralelo" (Parallel Project) y el ejecutable para la aplicaci&oacute;n.</li><li>En la pesta&ntilde;a de depuraci&oacute;n, buscamos el depurador sdm que construimos anteriormente en la "ruta para el ejecutable de depuraci&oacute;n" ("Path to debugger executable" ).</li></ul> <p>M&aacute;s detalles sobre c&oacute;mo utilizar PTP en Ayuda (Help) → Contenidos de Ayuda (Help Contents), y click en “Gu&iacute;a de Usuario de PTP”(“Parallel Tools Platform User Guide”).<br />
+Tambi&eacute;n podemos encontrar la ayuda de PTP online (en ingl&eacute;s).</p></div></div><div id="creadoresWeb">
+					<span> Creado por: Daniel Guerrero Mart&iacute;nez y Sergio Rodr&iacute;guez Lumley 2010</span>
+			      <p><a target="_blank" href="http://validator.w3.org/check?uri=referer"><img
+				      src="http://www.w3.org/Icons/valid-html401"
+				      alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+				</p>
+				</div>
+			</body>
+		</html>
+

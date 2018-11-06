@@ -1,0 +1,18 @@
+/* 
+    Document   : teoria
+    Created on : 04-abr-2010, 11:26:34
+    Author     : Daniel Guerrero Martínez, Sergio Rodríguez Lumley
+    Description:
+        Se desea dar un diseño simple y sofisticado, siguiendo las reglas del
+    estándar CSS3.
+*/
+
+a img{
+    border: 0px;
+    text-decoration: none;
+}
+
+#cabecera {
+    height: 100px;
+    background: url("cabecera.png");
+}

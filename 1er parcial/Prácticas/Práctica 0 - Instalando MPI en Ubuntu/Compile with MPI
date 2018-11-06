@@ -1,0 +1,5 @@
+To compile and execute a program with MPI:
+
+mpicc file.c -o file
+export TMPDIR=/tmp
+mpirun -np 2 ./hello

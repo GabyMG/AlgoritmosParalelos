@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<!-- 
+    Document   : Funciones de MPI
+    Created on : 04-abr-2010, 10:02:39
+    Author     : Daniel Guerrero Mart�nez, Sergio Rodr�guez Lumley
+-->
+
+
+
+<html lang="es">
+                <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		    <meta name="google-site-verification" content="0DvGanY5lIegMDLM6tZWwbac1BFBH0TaSNDRU_nsfXw" />
+                    <!--<base href="http://lsi.ugr.es/jmantas/pdp/" >-->
+                    <link rel="shortcut icon" href="../imagenes/iconoweb.ico" type="imagen/x-icon" ><link href="../estilos/estilo_generico/generico.css" type="text/css" rel="stylesheet" title="Light"><title>Web de Programaci&oacute;n Distribuida y Paralela</title>
+                    <script src="../scripts/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+                    <script src="../scripts/jquery/jquery.scrollTo-min.js" type="text/javascript"></script>
+                    <script src="../scripts/animacionIndice.js" type="text/javascript"></script><link href="../estilos/estilo_ayuda/ayuda.css" type="text/css" rel="stylesheet">
+</head><body><div class="vista" id="cabecera"><div id="temas"><form method="get" action =""><input name="ins" value="eclipse01" type="hidden" ><input name="stylo" value="generico" type="hidden" ><input title="Light theme" id="light" value="generico" type="submit" class=selec> </form><form method="get" action =""><input name="ins" value="eclipse01" type="hidden" ><input name="stylo" value="dark" type="hidden" ><input title="Dark theme" id="dark" value="dark" type="submit" > </form></div><div id="idiomas"><form method="get" action =""><input name="ins" value="eclipse01" type="hidden" ><input name="idioma" value="es" type="hidden" ><input title="Español" id="es" value="es" type="submit" class=selec> </form><form method="get" action =""><input name="ins" value="eclipse01" type="hidden" ><input name="idioma" value="en" type="hidden" ><input title="English" id="en" value="en" type="submit" > </form></div></div><ol id="menu">
+	    <li class="menu vista" id="lHome"><a class="enlaceInvisible" title="Volver al inicio" href="../index.php.html">Home</a></li>
+            <li class="menu vista" id="lTeoria"><a class="enlaceInvisible" title="Ir al programa de teoria" href="../teoria/teoria.php.html">Ir al programa de teoria</a></li>
+            <li class="menu vista" id="lTutorial"><a class="enlaceInvisible" title="Ir a la sección de tutoriales" href="http://lsi.ugr.es/jmantas/pdp/tutoriales/tutoriales.php">Ir a la sección de tutoriales</a></li>
+            <li class="menu vista" id="lPractica"><a class="enlaceInvisible" title="Ir al programa de prácticas" href="http://lsi.ugr.es/jmantas/pdp/practicas/practicas.php">Ir al programa de prácticas</a></li>
+            <li class="menu vista" id="lAyuda"><a class="enlaceInvisible" title="Consultar ayuda de MPI y OpenMP" href="ayuda.php.html">Consultar ayuda de MPI y OpenMP</a></li>
+            <li class="menu vista" id="lProfesorado"><a class="enlaceInvisible" title="Ir a la sección de profesorado" href="http://lsi.ugr.es/jmantas/pdp/profesorado/profesorado.php">Ir a la sección de profesorado</a></li>
+        </ol><div class="vista" id="cuerpo"><ol class="indiceInterno" id="indiceInterno" start="0"><li class="h1">Indice de pagina</li><li class="h2"><a href="../index.html#nodiveclipseinstall">1. Instalaci&oacute;n de Eclipse 1/3 </a></li><li class="h2"><a href="../index.html#descarga">2. Introducci&oacute;n</a></li><li class="h2"><a href="../index.html#openmpi">3. Instalaci&oacute;n del IDE Eclipse Galileo</a></li><li class="h3"><a href="../index.html#repo">3.1. A&ntilde;adir repositorios a Eclipse</a></li><li class="h2"><a href="../index.html#nodivcont">4. Continuar</a></li></ol><h1 id="nodiveclipseinstall" >Instalaci&oacute;n de Eclipse 1/3 <a class="bDescarga" title="Descarga el fichero" href="datos/instalaciones/Instalacion_Depurador_Eclipse.pdf">Descarga</a></h1><h1 id="descarga" >Introducci&oacute;n</h1><div class="contenido"><p>Vamos a instalar un IDE para C y C++ para poder depurar nuestros proyectos con seguridad. El software que instalaremos ser&aacute; el siguiente:<br />
+    </p> <ul><li>Eclipse Galileo (Versi&oacute;n 3.5.x)</li><li>Plugin para Eclipse Galileo C Development Tools (CDT) 6.0.2</li><li>Plugin para Eclipse Galileo Parallel Tools Platform (PTP) 3.0</li><li>Depurador paralelo basado en gdm, SDM.</li></ul> <p>Requisitos previos:<br />
+    </p> <ul><li>OpenMPI (Implementaci&oacute;n de la interfaz <span class="funcion"><a href="mpi_ayuda.php.html">MPI</a></span>).</li><li>Tener java instalado en la m&aacute;quina (Por ejemplo: sun-java6-jre y sun-java6-jdk)</li><li>Compilador de C/C++, recomendamos el compilador de GNU GCC 4.4.1 o superior.</li></ul> <p>Aunque se indicar&aacute; en cada caso, asumiremos que la instalaci&oacute;n de cada elemento ser&aacute; desde Ubuntu (Linux/Unix), con lo que se dispone de un gestor de paquetes y de la herramienta “sudo” como superusuario.</p></div><h1 id="openmpi" >Instalaci&oacute;n del IDE Eclipse Galileo</h1><div class="contenido"><p>Eclipse Galileo es un IDE de c&oacute;digo abierto basado en Java. Su desarrollo es abierto y llevada a cabo por la comunidad de Eclipse. En nuestro caso, nos interesa su desarrollo para C/C++ con OpenMPI y <span class="funcion"><a href="omp_ayuda.php.html">OpenMP</a></span>, adem&aacute;s de sus plugins para desarrollo de programas paralelos.<br />
+<br />
+    El programa se puede descargar directamente desde su p&aacute;gina inicial:<br />
+    </p> <a href="http://www.eclipse.org">http://www.eclipse.org</a> <p>Existen varios paquetes de eclipse para descargar. Puesto que solo nos interesa su funcionalidad con C y C++, descargaremos el paquete de C y C++. Sin embargo cualquiera nos vale, puesto que instalaremos luego explicaremos c&oacute;mo instalar su funcionalidad desde plugins.<br />
+<br />
+    </p> <img alt="Captura de la web oficial de descarga de eclipse" src="datos/imagenes_eclipse/01.jpg" /> <p>Su instalaci&oacute;n desde los repositorios de Ubuntu (Linux/Unix) es tan sencillo como:<br />
+    <br />
+    </p> <div class="consola">sudo apt-get install eclipse</div> <h2 id="repo" >A&ntilde;adir repositorios a Eclipse</h2><p>Puesto que es algo que haremos a menudo, vamos a explicar c&oacute;mo a&ntilde;adir los repositorios principales (oficiales) de Eclipse a su lista de software.<br />
+    Comenzamos por abrir el programa, deber&iacute;a aparecer una imagen de inicio similar a la mostrada. Nos dar&aacute; a elegir un espacio de trabajo, seleccionaremos el de “por defecto” puesto que para lo que necesitamos no lo utilizaremos.<br />
+<br />
+    Una vez abierto el programa, seleccionamos abrir el cuadro de preferencias en el men&uacute; <br />
+    Ventana (Window) → Preferencias (Preferences).<br />
+<br />
+    </p> <img alt="Ilustración de Eclipse para ubicación de preferencias" src="datos/imagenes_eclipse/02.jpg" /> <p>En la ventana de preferencias, buscamos en la barra lateral izquierda<br />
+    Instalaci&oacute;n/Actualizaci&oacute;n (Install/Update) → Software Disponible (Available Software).<br />
+<br />
+    </p> <img alt="Ilustración de Eclipse para ubicación de el Software Disponible" src="datos/imagenes_eclipse/03.jpg" /> <p>Pulsamos el bot&oacute;n de a&ntilde;adir (Add) y a&ntilde;adimos un nombre y la direcci&oacute;n (esta puede ser a trav&eacute;s de internet o desde un fichero). En nuestro caso a&ntilde;adiremos:<br />
+    </p> <table><tbody><tr><td><span class="negrita">Nombre (Name): </span></td><td>Repositorio oficial de Eclipse Galileo</td></tr><tr><td><span class="negrita">    Localizaci&oacute;n (Location): </span></td><td>http://download.eclipse.org/releases/galileo/</td></tr></tbody></table> <p>Como muestra la siguiente figura:<br />
+<br />
+    </p> <img alt="Ilustración de Eclipse para añadir repositorio" src="datos/imagenes_eclipse/04.jpg" /> <p>Una vez a&ntilde;adido, pulsamos el bot&oacute;n de Comprobar conexi&oacute;n (Test Connection). Esto nos alertar&aacute; en caso de alg&uacute;n problema o si todo ha ido bien.</p></div><h1 id="nodivcont" >Continuar</h1> <a class="bImagen" href="instalacion.php-ins=eclipse02.html"> 
+	<img alt="Continuar" src="../imagenes/continuar.jpg" /> 
+    </a> </div><div id="creadoresWeb">
+					<span> Creado por: Daniel Guerrero Mart&iacute;nez y Sergio Rodr&iacute;guez Lumley 2010</span>
+			      <p><a target="_blank" href="http://validator.w3.org/check?uri=referer"><img
+				      src="http://www.w3.org/Icons/valid-html401"
+				      alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+				</p>
+				</div>
+			</body>
+		</html>
+

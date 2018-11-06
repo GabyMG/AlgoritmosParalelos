@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<!-- 
+    Document   : Funciones de MPI
+    Created on : 04-abr-2010, 10:02:39
+    Author     : Daniel Guerrero Mart�nez, Sergio Rodr�guez Lumley
+-->
+
+
+
+<html lang="es">
+                <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		    <meta name="google-site-verification" content="0DvGanY5lIegMDLM6tZWwbac1BFBH0TaSNDRU_nsfXw" />
+                    <!--<base href="http://lsi.ugr.es/jmantas/pdp/" >-->
+                    <link rel="shortcut icon" href="../imagenes/iconoweb.ico" type="imagen/x-icon" ><link href="../estilos/estilo_generico/generico.css" type="text/css" rel="stylesheet" title="Light"><title>Web de Programaci&oacute;n Distribuida y Paralela</title>
+                    <script src="../scripts/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+                    <script src="../scripts/jquery/jquery.scrollTo-min.js" type="text/javascript"></script>
+                    <script src="../scripts/animacionIndice.js" type="text/javascript"></script><link href="../estilos/estilo_ayuda/ayuda.css" type="text/css" rel="stylesheet">
+</head><body><div class="vista" id="cabecera"><div id="temas"><form method="get" action =""><input name="ayuda" value="MPI_Type_commit" type="hidden" ><input name="stylo" value="generico" type="hidden" ><input title="Light theme" id="light" value="generico" type="submit" class=selec> </form><form method="get" action =""><input name="ayuda" value="MPI_Type_commit" type="hidden" ><input name="stylo" value="dark" type="hidden" ><input title="Dark theme" id="dark" value="dark" type="submit" > </form></div><div id="idiomas"><form method="get" action =""><input name="ayuda" value="MPI_Type_commit" type="hidden" ><input name="idioma" value="es" type="hidden" ><input title="Español" id="es" value="es" type="submit" class=selec> </form><form method="get" action =""><input name="ayuda" value="MPI_Type_commit" type="hidden" ><input name="idioma" value="en" type="hidden" ><input title="English" id="en" value="en" type="submit" > </form></div></div><ol id="menu">
+	    <li class="menu vista" id="lHome"><a class="enlaceInvisible" title="Volver al inicio" href="../index.php.html">Home</a></li>
+            <li class="menu vista" id="lTeoria"><a class="enlaceInvisible" title="Ir al programa de teoria" href="../teoria/teoria.php.html">Ir al programa de teoria</a></li>
+            <li class="menu vista" id="lTutorial"><a class="enlaceInvisible" title="Ir a la sección de tutoriales" href="http://lsi.ugr.es/jmantas/pdp/tutoriales/tutoriales.php">Ir a la sección de tutoriales</a></li>
+            <li class="menu vista" id="lPractica"><a class="enlaceInvisible" title="Ir al programa de prácticas" href="http://lsi.ugr.es/jmantas/pdp/practicas/practicas.php">Ir al programa de prácticas</a></li>
+            <li class="menu vista" id="lAyuda"><a class="enlaceInvisible" title="Consultar ayuda de MPI y OpenMP" href="ayuda.php.html">Consultar ayuda de MPI y OpenMP</a></li>
+            <li class="menu vista" id="lProfesorado"><a class="enlaceInvisible" title="Ir a la sección de profesorado" href="http://lsi.ugr.es/jmantas/pdp/profesorado/profesorado.php">Ir a la sección de profesorado</a></li>
+        </ol><div id="navegador"><div class="navegador" id="anterior"> <a class="enlaceInvisible" title="MPI_Type_vector" href="mpi_ayuda.php-ayuda=MPI_Type_vector.html">Atras</a> </div><div class="navegador" id="enlaceIndice" title="mpi"> </div><div class="navegador" id="siguiente"> <a class="enlaceInvisible" title="MPI_Type_free" href="mpi_ayuda.php-ayuda=MPI_Type_free.html">Siguiente</a> </div></div><div class="vista" id="cuerpo"><ol class="indiceInterno" id="indiceInterno" start="0"><li class="h1">Indice de pagina</li><li class="h2"><a href="../index.html#nodivShortDescription">1. Descripci&oacute;n breve</a></li><li class="h2"><a href="../index.html#nodivSinopsis">2. Sintaxis</a></li><li class="h3"><a href="../index.html#enC">2.1. En C</a></li><li class="h3"><a href="../index.html#enCpp">2.2. En C++</a></li><li class="h2"><a href="../index.html#nodivParams">3. Par&aacute;metros</a></li><li class="h3"><a href="../index.html#divInParams">3.1. De entrada</a></li><li class="h2"><a href="../index.html#Descripcion">4. Descripci&oacute;n</a></li><li class="h2"><a href="../index.html#Errors">5. Errores</a></li><li class="h2"><a href="../index.html#nodivVTmbien">6. V&eacute;ase tambi&eacute;n</a></li></ol><h1 class="titulo"><span class="funcion"><a href="mpi_ayuda.php-ayuda=MPI_Type_commit.html">MPI_Type_commit</a></span></h1><h1 id="nodivShortDescription" >Descripci&oacute;n breve</h1><p>Confirma el tipo de dato.</p><h1 id="nodivSinopsis" >Sintaxis</h1><h2 id="enC" >En C</h2> <div class="codigo"><pre class="cpp" style="font-family:monospace;"><span style="color: #339900;">#include &lt;mpi.h&gt;</span>
+<span style="color: #0000ff;">int</span> <span class="funcion"><a href="mpi_ayuda.php-ayuda=MPI_Type_commit.html">MPI_Type_commit</a></span><span style="color: #008000;">&#40;</span><span class="funcion"><a href="mpi_ayuda.php-ayuda=mpi_datatypes.html">MPI_Datatype</a></span> <span style="color: #000040;">*</span>datatype<span style="color: #008000;">&#41;</span></pre></div> <h2 id="enCpp" >En C++</h2> <div class="codigo"><pre class="cpp" style="font-family:monospace;"><span style="color: #339900;">#include &lt;mpi.h&gt;</span>
+<span style="color: #0000ff;">void</span> Datatype<span style="color: #008080;">::</span><span style="color: #007788;">Commit</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span></pre></div> <h1 id="nodivParams" >Par&aacute;metros</h1><h2 id="divInParams" >De entrada</h2><div class="contenido"> <table><tbody><tr><td><span class="negrita">datatype </span></td><td>Tipo de dato.</td></tr></tbody></table> </div><h1 id="Descripcion" >Descripci&oacute;n</h1><div class="contenido"><p>Un tipo de dato es la descripci&oacute;n formal de un buffer de comunicaci&oacute;n, no el contenido de tal. Despu&eacute;s de confirmado el tipo de dato se puede reutilizar repetidamente para las comunicaciones, cambiando su contenido.</p></div><h1 id="Errors" >Errores</h1><div class="contenido"> <table><tbody><tr><td><span class="negrita">MPI_SUCCESS </span></td><td>No ha habido error, la funci&oacute;n se ha completado satisfactoriamente.</td></tr><tr><td><span class="negrita">    MPI_ERR_TYPE </span></td><td>Argumento tipo de dato invalido. Puede ser un tipo de dato no confirmado (<span class="funcion"><a href="mpi_ayuda.php-ayuda=MPI_Type_commit.html">MPI_Type_commit</a></span>).</td></tr></tbody></table> </div><h1 id="nodivVTmbien" >V&eacute;ase tambi&eacute;n</h1><p><span class="funcion"><a href="mpi_ayuda.php-ayuda=MPI_Type_vector.html">MPI_Type_vector</a></span><br />
+    <span class="funcion"><a href="mpi_ayuda.php-ayuda=MPI_Type_free.html">MPI_Type_free</a></span></p></div><div id="creadoresWeb">
+					<span> Creado por: Daniel Guerrero Mart&iacute;nez y Sergio Rodr&iacute;guez Lumley 2010</span>
+			      <p><a target="_blank" href="http://validator.w3.org/check?uri=referer"><img
+				      src="http://www.w3.org/Icons/valid-html401"
+				      alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+				</p>
+				</div>
+			</body>
+		</html>

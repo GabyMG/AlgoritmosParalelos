@@ -1,0 +1,44 @@
+<!-- 
+    Document   : Funciones de MPI
+    Created on : 04-abr-2010, 10:02:39
+    Author     : Daniel Guerrero Mart�nez, Sergio Rodr�guez Lumley
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+<html lang="es">
+                <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		    <meta name="google-site-verification" content="0DvGanY5lIegMDLM6tZWwbac1BFBH0TaSNDRU_nsfXw" />
+                    <!--<base href="http://lsi.ugr.es/jmantas/pdp/" >-->
+                    <link rel="shortcut icon" href="../imagenes/iconoweb.ico" type="imagen/x-icon" ><link href="../estilos/estilo_generico/generico.css" type="text/css" rel="stylesheet" title="Light"><title>Web de Programaci&oacute;n Distribuida y Paralela</title>
+                    <script src="../scripts/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+                    <script src="../scripts/jquery/jquery.scrollTo-min.js" type="text/javascript"></script>
+                    <script src="../scripts/animacionIndice.js" type="text/javascript"></script><link href="../estilos/estilo_ayuda/ayuda.css" type="text/css" rel="stylesheet">
+</head><body><div class="vista" id="cabecera"><div id="temas"><form method="get" action =""><input name="ayuda" value="omp_clausulas" type="hidden" ><input name="stylo" value="generico" type="hidden" ><input title="Light theme" id="light" value="generico" type="submit" class=selec> </form><form method="get" action =""><input name="ayuda" value="omp_clausulas" type="hidden" ><input name="stylo" value="dark" type="hidden" ><input title="Dark theme" id="dark" value="dark" type="submit" > </form></div><div id="idiomas"><form method="get" action =""><input name="ayuda" value="omp_clausulas" type="hidden" ><input name="idioma" value="es" type="hidden" ><input title="Español" id="es" value="es" type="submit" class=selec> </form><form method="get" action =""><input name="ayuda" value="omp_clausulas" type="hidden" ><input name="idioma" value="en" type="hidden" ><input title="English" id="en" value="en" type="submit" > </form></div></div><ol id="menu">
+	    <li class="menu vista" id="lHome"><a class="enlaceInvisible" title="Volver al inicio" href="../index.php.html">Home</a></li>
+            <li class="menu vista" id="lTeoria"><a class="enlaceInvisible" title="Ir al programa de teoria" href="../teoria/teoria.php.html">Ir al programa de teoria</a></li>
+            <li class="menu vista" id="lTutorial"><a class="enlaceInvisible" title="Ir a la sección de tutoriales" href="http://lsi.ugr.es/jmantas/pdp/tutoriales/tutoriales.php">Ir a la sección de tutoriales</a></li>
+            <li class="menu vista" id="lPractica"><a class="enlaceInvisible" title="Ir al programa de prácticas" href="http://lsi.ugr.es/jmantas/pdp/practicas/practicas.php">Ir al programa de prácticas</a></li>
+            <li class="menu vista" id="lAyuda"><a class="enlaceInvisible" title="Consultar ayuda de MPI y OpenMP" href="ayuda.php.html">Consultar ayuda de MPI y OpenMP</a></li>
+            <li class="menu vista" id="lProfesorado"><a class="enlaceInvisible" title="Ir a la sección de profesorado" href="http://lsi.ugr.es/jmantas/pdp/profesorado/profesorado.php">Ir a la sección de profesorado</a></li>
+        </ol><div id="navegador"><div class="navegador" id="anterior"> <a class="enlaceInvisible" title="omp_directivas" href="omp_ayuda.php-ayuda=omp_directivas.html">Atras</a> </div><div class="navegador" id="enlaceIndice" title="omp"> </div><div class="navegador" id="siguiente"> <a class="enlaceInvisible" title="schedule" href="omp_ayuda.php-ayuda=schedule.html">Siguiente</a> </div></div><div class="vista" id="cuerpo"><ol class="indiceInterno" id="indiceInterno" start="0"><li class="h1">Indice de pagina</li><li class="h2"><a href="../index.html#introduction">1. Introducci&oacute;n</a></li><li class="h2"><a href="../index.html#attribute">2. Clausula de compartici&oacute;n de datos</a></li><li class="h3"><a href="../index.html#default">2.1. default(shared|none)</a></li><li class="h3"><a href="../index.html#shared">2.2. shared(list)</a></li><li class="h3"><a href="../index.html#private">2.3. private(list)</a></li><li class="h3"><a href="../index.html#firstprivate">2.4. firstprivate(list)</a></li><li class="h3"><a href="../index.html#lastprivate">2.5. lastprivate(list)</a></li><li class="h3"><a href="../index.html#reduction">2.6. reduction(operator:list)</a></li><li class="h3"><a href="../index.html#nowait">2.7. nowait</a></li><li class="h2"><a href="../index.html#copyingClauses">3. Clausulas de copia de datos</a></li><li class="h3"><a href="../index.html#copyin">3.1. copyin(list)</a></li><li class="h3"><a href="../index.html#copyprivate">3.2. copyprivate(list)</a></li></ol><h1 class="titulo">Clausulas <span class="funcion"><a href="omp_ayuda.php.html">OpenMP</a></span></h1><h1 id="introduction" >Introducci&oacute;n</h1><div class="contenido"><p>No todas las clausulas son validas para todas las directivas. La colecci&oacute;n de clausulas v&aacute;lidas para una directiva en particular esta descrita en las directivas.<br />
+    La mayor&iacute;a de las clausulas aceptan listas de elementos separadas por comas. Todos los elementos de la lista tienen que ser visibles.</p></div><h1 id="attribute" >Clausula de compartici&oacute;n de datos</h1><div class="contenido"><p>Los atributos de las clausulas para la comparticion de datos solo se aplica a las variables cuyos nombres son visibles en el constructor donde aparece la calusula.</p><h2 id="default" >default(shared|none)</h2><p>Controla el atributo por defecto de comparticion de datos para variables referenciasdas en el contructor de la regi&oacute;n paralela o tarea.</p><h2 id="shared" >shared(list)</h2><p>Declara uno o mas elementos que se comparten por las tareas generadas por el contructor de la regi&oacute;n paralela o tarea.</p><h2 id="private" >private(list)</h2><p>Declaro uno o mas elementos privados para la tarea.</p><h2 id="firstprivate" >firstprivate(list)</h2><p>Declara uno o mas elementos privados para la tarea, y inicializados cada una a su correspondiente valor del elemento original en el momento que se encuentra el contructor.</p><h2 id="lastprivate" >lastprivate(list)</h2><p>Declara uno o mas elementos privados impl&iacute;citos a la tarea, y causa que el elemento original se actualiza despu&eacute;s de terminar la regi&oacute;n.</p><h2 id="reduction" >reduction(operator:list)</h2><p>Declara una acumulaci&oacute;n a partir de una lista de elementos usando un operador asociativo indicado.<br />
+        La acumulaci&oacute;n ocurre en la copia privada de cada elemento de la lista cuales son combinados con el elemento original.</p><h2 id="nowait" >nowait</h2><p>Evita la sincronizaci&oacute;n impl&iacute;cita de las hebras al terminar el bloque de una directiva.</p></div><h1 id="copyingClauses" >Clausulas de copia de datos</h1><div class="contenido"><p>Estas clausulas soportan la copia de valores dentro de variables privadas en una tarea o hebra correspondiente a otra tarea o hebra del equipo.</p><h2 id="copyin" >copyin(list)</h2><p>Copia los valores de las variables privadas de la hebra master en cada una de las otras pertenecientes al equipo de ejecuci&oacute;n de la regi&oacute;n paralela.</p><h2 id="copyprivate" >copyprivate(list)</h2><p>Transmite el valor de un entorno de datos de una tarea a otra entorno de datos de las tarea pertenecientes a la regi&oacute;n paralela</p></div></div><div id="creadoresWeb">
+					<span> Creado por: Daniel Guerrero Mart&iacute;nez y Sergio Rodr&iacute;guez Lumley 2010</span>
+			      <p><a target="_blank" href="http://validator.w3.org/check?uri=referer"><img
+				      src="http://www.w3.org/Icons/valid-html401"
+				      alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+				</p>
+				</div>
+			</body>
+		</html>
+
+
+
+
+
+
+
